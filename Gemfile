@@ -1,23 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.1'
-
-#Heroku
-group :development, :test do
-# gem 'sqlite3'
-end
-group :production do
-  gem 'rails_12factor'
-  gem 'pg'
-  gem 'unicorn'
-end
+ruby '>= 2.3.5', '< 2.8'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
+gem 'rails', '~> 5.2.0'
 # gem 'sqlite3'
 # Use postgresql as the database for Active Record
-# gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg', '~> 0.18'
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'bootstrap-sass'
 # Use Puma as the app server
