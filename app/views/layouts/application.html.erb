@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <!--<html lang=”pt-br”>-->
+
+  <head>
+    <meta charset=”utf-8″>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, shrink-to-fit=no”>
+    <title>Agenda30</title>
+
+    <link rel=”stylesheet” href=”./node_modules/bootstrap/dist/css/bootstrap.css”>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+
+    <script src=”./node_modules/jquery/dist/jquery.slim.min.js”></script>
+
+    <script src=”./node_modules/popper.js/dist/popper.min.js”></script>
+
+    <script src=”./node_modules/bootstrap/dist/js/bootstrap.js”></script>
+
+    <% flash.each do |message_type, message| %>
+
+      <%= content_tag 'div', class: "alert alert-#{message_type} alert-dismissible", role: ' alert' do %> 
+        <%= message %>
+      <%end%>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="container">
+    </div>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

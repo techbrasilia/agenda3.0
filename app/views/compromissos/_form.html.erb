@@ -1,0 +1,34 @@
+<%= form_with(model: compromisso, local: true) do |form| %>
+  <% if compromisso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(compromisso.errors.count, "error") %> prohibited this compromisso from being saved:</h2>
+
+      <ul>
+        <% compromisso.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_field :data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora %>
+    <%= form.text_field :hora %>
+    
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

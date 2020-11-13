@@ -1,0 +1,49 @@
+<%= form_with(model: empregado, local: true) do |form| %>
+  <% if empregado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(empregado.errors.count, "error") %> prohibited this empregado from being saved:</h2>
+
+      <ul>
+        <% empregado.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <span>Selecione um compromisso ou cadastre um novo.</span>      
+
+  <div class="form-group">
+    <% compromissos = @compromissos.map{|comp|[comp.tipo, comp.id]} %>
+    <%= select_tag("compromissos_id", options_for_select(compromissos)) %>
+    <a href="http://localhost:3000/compromissos/new">Novo Compromisso</a>
+  </div> 
+  </br>        
+  <span>Selecione uma nova empresa ou cadastre uma nova.</span>
+
+  <div class="form-group">
+    <% empresas = @empresas.map{|emp|[emp.razao_social, emp.id]} %>
+    <%= select_tag("empregado[empresa_id]", options_for_select(empresas)) %>
+    <a href="http://localhost:3000/empresas/new">Nova Empresa</a>
+  </div>  
+  </br>        
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

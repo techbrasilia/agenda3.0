@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: MyString
+  hora: MyString
+  tipo: MyString
+  empregado: one
+
+two:
+  data: MyString
+  hora: MyString
+  tipo: MyString
+  empregado: two

@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+    //@import "bootstrap-sprockets";*/
+    //@import "bootstrap";
+
+@import "bootstrap";
+@import "static_pages";
+
+$gray-medium-light: #EAEAEA;
+
+$gray-medium-light: #e4eaec;
+$gray-light: #00FA9A;
+$gray-darker: #9400D3;
+$gray: #9400D3;
+$darkgray: #A9A9A9;
+
+/*class*/
+.container {
+   margin-top: 10px;
+}  
+.ico{
+   width: 20px;
+   margin-left: 15px;
+   margin-right: 10px;
+}
+.ico_footer{
+   width: 50px;
+}
+/* TAGs*/
+span {
+   margin-right: 20px;
+}
+ 
+nav#primary {
+background-color: #263237;
+}
+nav {
+background-color: #7d7d7d;
+a {
+   color: #e4e4e4;
+   /*It means: that a:hover */
+   &:hover{
+      color: $gray-darker;
+   }
+}  
+}
+ 
+body {
+background-color: #d7d7d7;
+}
+header {
+margin-top: 50px;
+padding-top: 5px;
+}
+
+footer {
+position: fixed;
+min-width: 100%;
+bottom:0;
+left: 0;
+right:0;
+border-top: 1px solid $gray-medium-light;
+color: $gray-light;
+background-color: #ffffff;
+
+a {
+   color: #000000;
+}
+
+small {
+   float: left;
+}
+
+ul {
+   float: right;
+   list-style: none;
+   li {
+      float: right;
+      margin-left: 20px;
+   }
+} 
+}
+/* IDs */
+    

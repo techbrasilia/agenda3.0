@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @compromisso.data %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @compromisso.hora %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @compromisso.tipo %>
+</p>
+
+
+<%= link_to 'Edit', edit_compromisso_path(@compromisso) %> |
+<%= link_to 'Back', compromissos_path %>

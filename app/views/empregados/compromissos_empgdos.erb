@@ -1,0 +1,12 @@
+<h1>Compromissos por empregado</h1>
+
+<h2>Compromissos do empregado: <%=@empregado.nome%></h2>
+<hr/>
+<% @empregado.compromissos.each do |compromisso| %>
+    <tr data-toggle="modal" data-target="#siteModal" >
+        <h2><%=compromisso.tipo%></h2>
+        <h2><%=compromisso.data%></h2>
+        <h2><%=compromisso.hora%></h2>
+        <hr/>
+    </tr>
+<% end %> 

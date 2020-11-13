@@ -1,0 +1,39 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$gray-medium-light: #e4eaec;
+$gray-light: #00FA9A;
+$gray-darker: #9400D3;
+$gray: #9400D3;
+$darkgray: #A9A9A9;
+
+
+
+
+/* IDs */
+/**ALTERANDO AS CORES PADRÕES DO BOOTSTRAP COM ARQUIVO CSS PERSONALIZADO**/
+.btn.btn-primary,
+.btn.btn-primary:hover{
+  background-color:green;
+  border-color:green;
+}
+
+.btn.btn-default,
+.btn.btn-default:hover{
+  background-color:blue;
+  border-color:blue;
+  color:#fff;
+}
+
+.btn.btn-danger,
+.btn.btn-danger:hover{
+  background-color:orange;
+  border-color:orange;
+}
+/**CRIANDO CLASSES PERSONALIZADAS**/
+.btn.btn-muted,
+.btn.btn-muted:hover{
+  background-color:gray;
+  border-color:gray;
+}
