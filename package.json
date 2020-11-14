@@ -4,7 +4,7 @@
   "scripts": {
     "build": "babel src -d lib",
     "test": "jest",
-    "start": "server"
+    "start": "rails s"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
