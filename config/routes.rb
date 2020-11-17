@@ -12,7 +12,7 @@
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :compromissos, only: [:new, :create, :index, :show, :edit, :destroy]
-  resources :empregados, only: [:new, :create, :index, :show, :edit, :destroy]
-  resources :empresas, only: [:new, :index, :edit, :create, :show, :destroy]
+  resources :compromissos
+  resources :empregados
+  resources :empresas
 end
